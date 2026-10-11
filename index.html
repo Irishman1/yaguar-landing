@@ -42,6 +42,8 @@ em.s{font-style:normal;font-weight:inherit;color:var(--red-2)}
 .label{display:inline-flex;align-items:center;gap:14px;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
 .label::before{content:"";width:28px;height:1px;background:var(--red)}
 .h2{font-weight:300;font-size:clamp(36px,5.4vw,80px);line-height:1.02;letter-spacing:-.035em}
+.label+.h2{margin-top:16px}
+.head .label{display:flex;width:fit-content}
 main{overflow-x:clip}
 
 /* preloader */
@@ -135,14 +137,14 @@ main{overflow-x:clip}
 @keyframes cue{to{top:100%}}
 
 /* common */
-.sec{padding:clamp(100px,13vw,190px) 0}
+.sec{padding:clamp(64px,8vw,120px) 0}
 .rv{opacity:0;transform:translateY(50px);transition:opacity 1.3s var(--ease),transform 1.3s var(--ease)}
 .rv.in{opacity:1;transform:none}
-.head{display:grid;grid-template-columns:minmax(0,900px) auto;justify-content:space-between;align-items:end;gap:40px;margin-bottom:clamp(50px,7vw,90px)}
+.head{display:grid;grid-template-columns:minmax(0,900px) auto;justify-content:space-between;align-items:end;gap:40px;margin-bottom:clamp(36px,5vw,72px)}
 .head p{max-width:380px;color:var(--muted)}
 
 /* manifesto */
-.mani{padding:clamp(110px,14vw,200px) 0}
+.mani{padding:clamp(72px,9vw,140px) 0}
 .mani__grid{display:grid;grid-template-columns:240px 1fr;gap:40px;align-items:start}
 .mani .label{margin-top:.9em}
 .mani p.big{font-weight:300;font-size:clamp(28px,3.7vw,56px);line-height:1.18;letter-spacing:-.03em}
@@ -254,7 +256,7 @@ main{overflow-x:clip}
 .wp.act .wp__in{transform:none;opacity:1}
 .wp__in h4{font-weight:300;font-size:clamp(28px,3vw,44px);letter-spacing:-.035em;line-height:1.08;max-width:16ch}
 .wp__in p{margin-top:16px;color:#c9c5bd;max-width:560px;font-size:16px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(50px,7vw,90px);border-top:1px solid var(--line-d)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(40px,5vw,72px);border-top:1px solid var(--line-d)}
 .stat{padding:30px 24px 0 0}
 .stat+.stat{padding-left:24px;border-left:1px solid var(--line-d)}
 .stat b{display:block;font-weight:300;font-size:clamp(48px,5.4vw,88px);line-height:.9;letter-spacing:-.05em}
@@ -284,7 +286,7 @@ main{overflow-x:clip}
 .rev__stage:hover~.rev__bar i{animation-play-state:paused}
 
 /* final */
-.final{position:relative;padding:clamp(120px,15vw,220px) 0 clamp(70px,8vw,120px);overflow:hidden;isolation:isolate}
+.final{position:relative;padding:clamp(90px,12vw,190px) 0 clamp(60px,7vw,110px);overflow:hidden;isolation:isolate}
 .final__bg{position:absolute;inset:-12% 0;z-index:-2}
 .final__bg img{width:100%;height:100%;object-fit:cover}
 .final::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(11,11,12,.95) 25%,rgba(11,11,12,.55) 65%,rgba(11,11,12,.35)),linear-gradient(0deg,var(--bg),transparent 25%),linear-gradient(180deg,var(--bg),transparent 25%)}
@@ -343,7 +345,7 @@ main{overflow-x:clip}
 .map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:invert(.92) hue-rotate(180deg) grayscale(.9) contrast(.9)}
 
 /* footer */
-.ftr{border-top:1px solid var(--line);margin-top:clamp(90px,11vw,160px);padding:60px 0 34px}
+.ftr{border-top:1px solid var(--line);margin-top:clamp(64px,8vw,120px);padding:60px 0 34px}
 .ftr__top{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;padding-bottom:50px}
 .ftr__top img{height:70px;width:auto}
 .ftr__nav{display:flex;gap:28px;flex-wrap:wrap}
@@ -388,6 +390,9 @@ main{overflow-x:clip}
 @media (max-width:900px){
   .who__grid{grid-template-columns:1fr;gap:36px}
   .why__grid,.rev__wrap{grid-template-columns:1fr}
+  .rev__wrap{gap:32px}
+  .rev__nav{margin-top:28px}
+  .rv-item__q{width:36px;height:36px;margin-bottom:18px}
   .why__panels{min-height:440px}
   .stats{grid-template-columns:1fr 1fr}
   .stat:nth-child(3){padding-left:0;border-left:0}
@@ -517,7 +522,7 @@ main{overflow-x:clip}
     <div class="head">
       <div>
         <span class="label rv">Переваги</span>
-        <h2 class="h2 rv" style="margin-top:26px">Чому варто обрати <em class="s">нас?</em></h2>
+        <h2 class="h2 rv">Чому варто обрати <em class="s">нас?</em></h2>
       </div>
     </div>
     <div class="why__grid">
@@ -546,7 +551,7 @@ main{overflow-x:clip}
     <div class="head">
       <div>
         <span class="label rv">Коли потрібно</span>
-        <h2 class="h2 rv" style="margin-top:26px">Коли потрібно замовити <em class="s">індивідуальні уроки</em> з водіння?</h2>
+        <h2 class="h2 rv">Коли потрібно замовити <em class="s">індивідуальні уроки</em> з водіння?</h2>
       </div>
       <p class="rv">Якщо впізнаєте себе хоча б в одному пункті, запишіться на індивідуальні уроки.</p>
     </div>
@@ -572,7 +577,7 @@ main{overflow-x:clip}
     <div class="head">
       <div>
         <span class="label rv">Що ми пропонуємо</span>
-        <h2 class="h2 rv" style="margin-top:26px">Навчання у <em class="s">зручний</em> для вас час</h2>
+        <h2 class="h2 rv">Навчання у <em class="s">зручний</em> для вас час</h2>
       </div>
       <p class="rv">Ідеально підходить для студентів і працюючих людей, незалежно від розкладу або робочих годин.</p>
     </div>
@@ -598,7 +603,7 @@ main{overflow-x:clip}
     <div class="head">
       <div>
         <span class="label rv">Категорії</span>
-        <h2 class="h2 rv" style="margin-top:26px">Також ви можете відкрити <em class="s">нову категорію</em></h2>
+        <h2 class="h2 rv">Також ви можете відкрити <em class="s">нову категорію</em></h2>
       </div>
     </div>
     <div class="cgrid">
@@ -616,7 +621,7 @@ main{overflow-x:clip}
   <div class="wrap rev__wrap">
     <div>
       <span class="label rv">Відгуки</span>
-      <h2 class="h2 rv" style="margin-top:26px">Що про нас <em class="s">говорять</em></h2>
+      <h2 class="h2 rv">Що про нас <em class="s">говорять</em></h2>
       <div class="rev__nav rv">
         <button type="button" id="revPrev" aria-label="Попередній відгук"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 8H2M7 3 2 8l5 5" stroke="currentColor" stroke-width="1.4"/></svg></button>
         <button type="button" id="revNext" aria-label="Наступний відгук"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.4"/></svg></button>
@@ -659,7 +664,7 @@ main{overflow-x:clip}
     <div class="head">
       <div>
         <span class="label rv">Контакти</span>
-        <h2 class="h2 rv" style="margin-top:26px">Чекаємо <em class="s">на вас</em></h2>
+        <h2 class="h2 rv">Чекаємо <em class="s">на вас</em></h2>
       </div>
     </div>
     <div class="cont__grid">
